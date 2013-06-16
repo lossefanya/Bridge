@@ -10,7 +10,8 @@
 
 #include "cocos2d.h"
 #include "SimpleAudioEngine.h"
-#include "HelloWorldScene.h"
+#include "BridgeUtils.h"
+#include "PlayLayer.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -30,17 +31,27 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
 
-    // turn on display FPS
-    pDirector->setDisplayStats(true);
+    CCSize screenSize = CCEGLView::sharedOpenGLView()->getFrameSize();
+    float screenRatio = screenSize.width/screenSize.height; // 화면비율
+    CCSize designSize = CCSizeMake(320, 320/screenRatio); //width 값 의미없음.
+	CCEGLView::sharedOpenGLView()->setDesignResolutionSize(designSize.width, designSize.height, kResolutionNoBorder);
 
-    // set FPS. the default value is 1.0/60 if you don't call this
-    pDirector->setAnimationInterval(1.0 / 60);
+	std::vector<std::string> searchPaths;
+	if (screenSize.height > 480) {
+		CCSize resourceSize = CCSizeMake(640, 640/screenRatio);
+		searchPaths.push_back("hd");
+		searchPaths.push_back("");
+		CCDirector::sharedDirector()->setContentScaleFactor(resourceSize.height/designSize.height);
+	} else {
+		CCSize resourceSize = CCSizeMake(320, 320/screenRatio);
+		searchPaths.push_back("sd");
+		searchPaths.push_back("");
+		CCDirector::sharedDirector()->setContentScaleFactor(resourceSize.height/designSize.height);
+	}
+	CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 
-    // create a scene. it's an autorelease object
-    CCScene *pScene = HelloWorld::scene();
-
-    // run
-    pDirector->runWithScene(pScene);
+	
+	pDirector->runWithScene(BridgeUtils::wrap(PlayLayer::create()));
 
     return true;
 }

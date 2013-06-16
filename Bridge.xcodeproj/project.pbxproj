@@ -281,8 +281,27 @@
 		B14909821760B510009CEDB0 /* b2WheelJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909811760B510009CEDB0 /* b2WheelJoint.cpp */; };
 		B14909861760B510009CEDB0 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909851760B510009CEDB0 /* b2Rope.cpp */; };
 		B149098D1760B511009CEDB0 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B149098C1760B511009CEDB0 /* AppDelegate.cpp */; };
-		B14909901760B511009CEDB0 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B149098F1760B511009CEDB0 /* HelloWorldScene.cpp */; };
 		B14909921760B511009CEDB0 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = B14909911760B511009CEDB0 /* blocks.png */; };
+		B14909B51760B9A2009CEDB0 /* LHAnimationNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B149099A1760B9A2009CEDB0 /* LHAnimationNode.cpp */; };
+		B14909B61760B9A2009CEDB0 /* LHBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B149099C1760B9A2009CEDB0 /* LHBatch.cpp */; };
+		B14909B71760B9A2009CEDB0 /* LHContactInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B149099E1760B9A2009CEDB0 /* LHContactInfo.cpp */; };
+		B14909B81760B9A2009CEDB0 /* LHContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909A01760B9A2009CEDB0 /* LHContactListener.cpp */; };
+		B14909B91760B9A2009CEDB0 /* LHContactNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909A21760B9A2009CEDB0 /* LHContactNode.cpp */; };
+		B14909BA1760B9A2009CEDB0 /* LHFixture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909A41760B9A2009CEDB0 /* LHFixture.cpp */; };
+		B14909BB1760B9A2009CEDB0 /* LHSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909A61760B9A2009CEDB0 /* LHSettings.cpp */; };
+		B14909BC1760B9A2009CEDB0 /* LHSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909A81760B9A2009CEDB0 /* LHSprite.cpp */; };
+		B14909BD1760B9A2009CEDB0 /* SHDocumentLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909AA1760B9A2009CEDB0 /* SHDocumentLoader.cpp */; };
+		B14909BE1760B9A2009CEDB0 /* SpriteHelperLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909AC1760B9A2009CEDB0 /* SpriteHelperLoader.cpp */; };
+		B14909BF1760B9A2009CEDB0 /* LHArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909AF1760B9A2009CEDB0 /* LHArray.cpp */; };
+		B14909C01760B9A2009CEDB0 /* LHDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909B11760B9A2009CEDB0 /* LHDictionary.cpp */; };
+		B14909C11760B9A2009CEDB0 /* LHObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909B31760B9A2009CEDB0 /* LHObject.cpp */; };
+		B14909C51760BB0C009CEDB0 /* hd in Resources */ = {isa = PBXBuildFile; fileRef = B14909C21760BB0C009CEDB0 /* hd */; };
+		B14909C71760BB0C009CEDB0 /* sd in Resources */ = {isa = PBXBuildFile; fileRef = B14909C41760BB0C009CEDB0 /* sd */; };
+		B14909D51760BB99009CEDB0 /* BridgeUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909CB1760BB99009CEDB0 /* BridgeUtils.cpp */; };
+		B14909D61760BB99009CEDB0 /* FriendsLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909CD1760BB99009CEDB0 /* FriendsLayer.cpp */; };
+		B14909D71760BB99009CEDB0 /* MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909CF1760BB99009CEDB0 /* MainLayer.cpp */; };
+		B14909D81760BB99009CEDB0 /* MessageLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909D11760BB99009CEDB0 /* MessageLayer.cpp */; };
+		B14909D91760BB99009CEDB0 /* PlayLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14909D31760BB99009CEDB0 /* PlayLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -879,9 +898,46 @@
 		B14909891760B510009CEDB0 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		B149098B1760B511009CEDB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		B149098C1760B511009CEDB0 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
-		B149098E1760B511009CEDB0 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		B149098F1760B511009CEDB0 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
 		B14909911760B511009CEDB0 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		B149099A1760B9A2009CEDB0 /* LHAnimationNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHAnimationNode.cpp; sourceTree = "<group>"; };
+		B149099B1760B9A2009CEDB0 /* LHAnimationNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHAnimationNode.h; sourceTree = "<group>"; };
+		B149099C1760B9A2009CEDB0 /* LHBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHBatch.cpp; sourceTree = "<group>"; };
+		B149099D1760B9A2009CEDB0 /* LHBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBatch.h; sourceTree = "<group>"; };
+		B149099E1760B9A2009CEDB0 /* LHContactInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHContactInfo.cpp; sourceTree = "<group>"; };
+		B149099F1760B9A2009CEDB0 /* LHContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHContactInfo.h; sourceTree = "<group>"; };
+		B14909A01760B9A2009CEDB0 /* LHContactListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHContactListener.cpp; sourceTree = "<group>"; };
+		B14909A11760B9A2009CEDB0 /* LHContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHContactListener.h; sourceTree = "<group>"; };
+		B14909A21760B9A2009CEDB0 /* LHContactNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHContactNode.cpp; sourceTree = "<group>"; };
+		B14909A31760B9A2009CEDB0 /* LHContactNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHContactNode.h; sourceTree = "<group>"; };
+		B14909A41760B9A2009CEDB0 /* LHFixture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHFixture.cpp; sourceTree = "<group>"; };
+		B14909A51760B9A2009CEDB0 /* LHFixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFixture.h; sourceTree = "<group>"; };
+		B14909A61760B9A2009CEDB0 /* LHSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHSettings.cpp; sourceTree = "<group>"; };
+		B14909A71760B9A2009CEDB0 /* LHSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSettings.h; sourceTree = "<group>"; };
+		B14909A81760B9A2009CEDB0 /* LHSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHSprite.cpp; sourceTree = "<group>"; };
+		B14909A91760B9A2009CEDB0 /* LHSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSprite.h; sourceTree = "<group>"; };
+		B14909AA1760B9A2009CEDB0 /* SHDocumentLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SHDocumentLoader.cpp; sourceTree = "<group>"; };
+		B14909AB1760B9A2009CEDB0 /* SHDocumentLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDocumentLoader.h; sourceTree = "<group>"; };
+		B14909AC1760B9A2009CEDB0 /* SpriteHelperLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteHelperLoader.cpp; sourceTree = "<group>"; };
+		B14909AD1760B9A2009CEDB0 /* SpriteHelperLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteHelperLoader.h; sourceTree = "<group>"; };
+		B14909AF1760B9A2009CEDB0 /* LHArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHArray.cpp; sourceTree = "<group>"; };
+		B14909B01760B9A2009CEDB0 /* LHArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHArray.h; sourceTree = "<group>"; };
+		B14909B11760B9A2009CEDB0 /* LHDictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHDictionary.cpp; sourceTree = "<group>"; };
+		B14909B21760B9A2009CEDB0 /* LHDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDictionary.h; sourceTree = "<group>"; };
+		B14909B31760B9A2009CEDB0 /* LHObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LHObject.cpp; sourceTree = "<group>"; };
+		B14909B41760B9A2009CEDB0 /* LHObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHObject.h; sourceTree = "<group>"; };
+		B14909C21760BB0C009CEDB0 /* hd */ = {isa = PBXFileReference; lastKnownFileType = folder; name = hd; path = Resources/hd; sourceTree = "<group>"; };
+		B14909C41760BB0C009CEDB0 /* sd */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sd; path = Resources/sd; sourceTree = "<group>"; };
+		B14909CA1760BB99009CEDB0 /* BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BridgeHeader.h; path = Classes/BridgeHeader.h; sourceTree = "<group>"; };
+		B14909CB1760BB99009CEDB0 /* BridgeUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BridgeUtils.cpp; path = Classes/BridgeUtils.cpp; sourceTree = "<group>"; };
+		B14909CC1760BB99009CEDB0 /* BridgeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BridgeUtils.h; path = Classes/BridgeUtils.h; sourceTree = "<group>"; };
+		B14909CD1760BB99009CEDB0 /* FriendsLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FriendsLayer.cpp; path = Classes/FriendsLayer.cpp; sourceTree = "<group>"; };
+		B14909CE1760BB99009CEDB0 /* FriendsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsLayer.h; path = Classes/FriendsLayer.h; sourceTree = "<group>"; };
+		B14909CF1760BB99009CEDB0 /* MainLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainLayer.cpp; path = Classes/MainLayer.cpp; sourceTree = "<group>"; };
+		B14909D01760BB99009CEDB0 /* MainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainLayer.h; path = Classes/MainLayer.h; sourceTree = "<group>"; };
+		B14909D11760BB99009CEDB0 /* MessageLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MessageLayer.cpp; path = Classes/MessageLayer.cpp; sourceTree = "<group>"; };
+		B14909D21760BB99009CEDB0 /* MessageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageLayer.h; path = Classes/MessageLayer.h; sourceTree = "<group>"; };
+		B14909D31760BB99009CEDB0 /* PlayLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayLayer.cpp; path = Classes/PlayLayer.cpp; sourceTree = "<group>"; };
+		B14909D41760BB99009CEDB0 /* PlayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayLayer.h; path = Classes/PlayLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -952,6 +1008,8 @@
 		B14905F71760B502009CEDB0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B14909C21760BB0C009CEDB0 /* hd */,
+				B14909C41760BB0C009CEDB0 /* sd */,
 				B14905F81760B502009CEDB0 /* CloseNormal.png */,
 				B14905FA1760B502009CEDB0 /* CloseSelected.png */,
 				B14905FC1760B502009CEDB0 /* Default.png */,
@@ -988,6 +1046,7 @@
 				B14907FC1760B50B009CEDB0 /* CocosDenshion */,
 				B14908141760B50B009CEDB0 /* extensions */,
 				B14908F81760B50E009CEDB0 /* Box2D */,
+				B14909981760B9A2009CEDB0 /* SpriteHelper */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -2075,12 +2134,87 @@
 		B149098A1760B511009CEDB0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B149098B1760B511009CEDB0 /* AppDelegate.h */,
-				B149098C1760B511009CEDB0 /* AppDelegate.cpp */,
-				B149098E1760B511009CEDB0 /* HelloWorldScene.h */,
-				B149098F1760B511009CEDB0 /* HelloWorldScene.cpp */,
+				B14909DB1760BBC4009CEDB0 /* Application */,
+				B14909DA1760BBBC009CEDB0 /* Layers */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		B14909981760B9A2009CEDB0 /* SpriteHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B14909991760B9A2009CEDB0 /* Nodes */,
+				B14909AC1760B9A2009CEDB0 /* SpriteHelperLoader.cpp */,
+				B14909AD1760B9A2009CEDB0 /* SpriteHelperLoader.h */,
+				B14909AE1760B9A2009CEDB0 /* Utilities */,
+			);
+			name = SpriteHelper;
+			path = libs/SpriteHelper;
+			sourceTree = "<group>";
+		};
+		B14909991760B9A2009CEDB0 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				B149099A1760B9A2009CEDB0 /* LHAnimationNode.cpp */,
+				B149099B1760B9A2009CEDB0 /* LHAnimationNode.h */,
+				B149099C1760B9A2009CEDB0 /* LHBatch.cpp */,
+				B149099D1760B9A2009CEDB0 /* LHBatch.h */,
+				B149099E1760B9A2009CEDB0 /* LHContactInfo.cpp */,
+				B149099F1760B9A2009CEDB0 /* LHContactInfo.h */,
+				B14909A01760B9A2009CEDB0 /* LHContactListener.cpp */,
+				B14909A11760B9A2009CEDB0 /* LHContactListener.h */,
+				B14909A21760B9A2009CEDB0 /* LHContactNode.cpp */,
+				B14909A31760B9A2009CEDB0 /* LHContactNode.h */,
+				B14909A41760B9A2009CEDB0 /* LHFixture.cpp */,
+				B14909A51760B9A2009CEDB0 /* LHFixture.h */,
+				B14909A61760B9A2009CEDB0 /* LHSettings.cpp */,
+				B14909A71760B9A2009CEDB0 /* LHSettings.h */,
+				B14909A81760B9A2009CEDB0 /* LHSprite.cpp */,
+				B14909A91760B9A2009CEDB0 /* LHSprite.h */,
+				B14909AA1760B9A2009CEDB0 /* SHDocumentLoader.cpp */,
+				B14909AB1760B9A2009CEDB0 /* SHDocumentLoader.h */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		B14909AE1760B9A2009CEDB0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B14909AF1760B9A2009CEDB0 /* LHArray.cpp */,
+				B14909B01760B9A2009CEDB0 /* LHArray.h */,
+				B14909B11760B9A2009CEDB0 /* LHDictionary.cpp */,
+				B14909B21760B9A2009CEDB0 /* LHDictionary.h */,
+				B14909B31760B9A2009CEDB0 /* LHObject.cpp */,
+				B14909B41760B9A2009CEDB0 /* LHObject.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B14909DA1760BBBC009CEDB0 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				B14909CD1760BB99009CEDB0 /* FriendsLayer.cpp */,
+				B14909CE1760BB99009CEDB0 /* FriendsLayer.h */,
+				B14909CF1760BB99009CEDB0 /* MainLayer.cpp */,
+				B14909D01760BB99009CEDB0 /* MainLayer.h */,
+				B14909D11760BB99009CEDB0 /* MessageLayer.cpp */,
+				B14909D21760BB99009CEDB0 /* MessageLayer.h */,
+				B14909D31760BB99009CEDB0 /* PlayLayer.cpp */,
+				B14909D41760BB99009CEDB0 /* PlayLayer.h */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		B14909DB1760BBC4009CEDB0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B149098B1760B511009CEDB0 /* AppDelegate.h */,
+				B149098C1760B511009CEDB0 /* AppDelegate.cpp */,
+				B14909CA1760BB99009CEDB0 /* BridgeHeader.h */,
+				B14909CB1760BB99009CEDB0 /* BridgeUtils.cpp */,
+				B14909CC1760BB99009CEDB0 /* BridgeUtils.h */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2147,6 +2281,8 @@
 				B14906A91760B505009CEDB0 /* ChangeLog in Resources */,
 				B14908131760B50B009CEDB0 /* project.pbxproj in Resources */,
 				B14909921760B511009CEDB0 /* blocks.png in Resources */,
+				B14909C51760BB0C009CEDB0 /* hd in Resources */,
+				B14909C71760BB0C009CEDB0 /* sd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2408,7 +2544,24 @@
 				B14909821760B510009CEDB0 /* b2WheelJoint.cpp in Sources */,
 				B14909861760B510009CEDB0 /* b2Rope.cpp in Sources */,
 				B149098D1760B511009CEDB0 /* AppDelegate.cpp in Sources */,
-				B14909901760B511009CEDB0 /* HelloWorldScene.cpp in Sources */,
+				B14909B51760B9A2009CEDB0 /* LHAnimationNode.cpp in Sources */,
+				B14909B61760B9A2009CEDB0 /* LHBatch.cpp in Sources */,
+				B14909B71760B9A2009CEDB0 /* LHContactInfo.cpp in Sources */,
+				B14909B81760B9A2009CEDB0 /* LHContactListener.cpp in Sources */,
+				B14909B91760B9A2009CEDB0 /* LHContactNode.cpp in Sources */,
+				B14909BA1760B9A2009CEDB0 /* LHFixture.cpp in Sources */,
+				B14909BB1760B9A2009CEDB0 /* LHSettings.cpp in Sources */,
+				B14909BC1760B9A2009CEDB0 /* LHSprite.cpp in Sources */,
+				B14909BD1760B9A2009CEDB0 /* SHDocumentLoader.cpp in Sources */,
+				B14909BE1760B9A2009CEDB0 /* SpriteHelperLoader.cpp in Sources */,
+				B14909BF1760B9A2009CEDB0 /* LHArray.cpp in Sources */,
+				B14909C01760B9A2009CEDB0 /* LHDictionary.cpp in Sources */,
+				B14909C11760B9A2009CEDB0 /* LHObject.cpp in Sources */,
+				B14909D51760BB99009CEDB0 /* BridgeUtils.cpp in Sources */,
+				B14909D61760BB99009CEDB0 /* FriendsLayer.cpp in Sources */,
+				B14909D71760BB99009CEDB0 /* MainLayer.cpp in Sources */,
+				B14909D81760BB99009CEDB0 /* MessageLayer.cpp in Sources */,
+				B14909D91760BB99009CEDB0 /* PlayLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2550,6 +2703,7 @@
 				B14909971760B511009CEDB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

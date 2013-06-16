@@ -26,7 +26,7 @@
 #define __AssetsManager__
 
 #include <string>
-#include <curl/curl.h>
+#include "curl.h"
 
 #include "cocos2d.h"
 #include "ExtensionMacros.h"
