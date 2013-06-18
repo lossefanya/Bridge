@@ -8,7 +8,9 @@
 
 #include "PlayLayer.h"
 
-static const float gap = 10.0f;
+#define RelPos(x, y) ccp(bg->getContentSize().width * x, bg->getContentSize().height * y) //relative position
+
+static const float gap = 0.0f;
 
 bool PlayLayer::init()
 {
@@ -30,7 +32,11 @@ bool PlayLayer::init()
 	if (widthScale > heightScale) bg->setScale(heightScale);
 	else bg->setScale(widthScale);
 
-#define RelPos(x, y) ccp(bgSize.width * x, bgSize.height * y) //relative position
+	
+	leftUpPosition = RelPos(.345, .54);
+	leftDownPosition = RelPos(.345, .28);
+	rightUpPosition = RelPos(.655, .54);
+	rightDownPosition = RelPos(.655, .28);
 		
 	//add parts
 	CCSprite* goal = CCSprite::create("p_escape_01.png");
@@ -77,41 +83,41 @@ void PlayLayer::onEnterTransitionDidFinish()
 
 void PlayLayer::leftUp()
 {
-	platform->runAction(CCMoveTo::create(.3, leftUpPosition));
+	platform->runAction(CCMoveTo::create(.2, leftUpPosition));
 }
 
 void PlayLayer::leftDown()
 {
-	platform->runAction(CCMoveTo::create(.3, leftDownPosition));
+	platform->runAction(CCMoveTo::create(.2, leftDownPosition));
 }
 
 void PlayLayer::rightUp()
 {
-	platform->runAction(CCMoveTo::create(.3, rightUpPosition));
+	platform->runAction(CCMoveTo::create(.2, rightUpPosition));
 }
 
 void PlayLayer::rightDown()
 {
-	platform->runAction(CCMoveTo::create(.3, rightDownPosition));
+	platform->runAction(CCMoveTo::create(.2, rightDownPosition));
 }
 
 void PlayLayer::spawn()
 {
-    CCSize size = bg->getContentSize();
+	float width = bg->getContentSize().width;
 	CCPoint start;
 	int i = (int)(CCRANDOM_0_1()*4);
 	switch (i) {
 		case 0:
-			start = ccp(gap, 105);
+			start = RelPos(0, .55);
 			break;
 		case 1:
-			start = ccp(gap, 180);
+			start = RelPos(0, .29);
 			break;
 		case 2:
-			start = ccp(size.width - gap, 105);
+			start = RelPos(1, .55);
 			break;
 		case 3:
-			start = ccp(size.width - gap, 180);
+			start = RelPos(1, .29);
 			break;
 		default:
 			spawn();
@@ -121,7 +127,8 @@ void PlayLayer::spawn()
 	CCSprite* puppy = CCSprite::create("walk001.png"); //SpriteHelperLoader::createSpriteWithName("walk001", "Play", "sprite.pshs");
 	puppy->setAnchorPoint(ccp(.5, 0));
 	puppy->setPosition(start);
-	puppy->setFlipX(start.x == gap);
+	puppy->setScale(1.5);
+	puppy->setFlipX(start.x == 0);
 	bg->addChild(puppy);
 	CCAnimation *animation = CCAnimation::create();
 	animation->setDelayPerUnit(.5/4);
@@ -139,20 +146,20 @@ void PlayLayer::spawn()
 
 void PlayLayer::move(cocos2d::CCNode *obj, void *data)
 {
-	float distance = 35;
 	float winWidth = bg->getContentSize().width;
+	float distance = winWidth * .125;
 	CCSprite *puppy = (CCSprite*)obj;
 	CCPoint position = puppy->getPosition();
 	
 	//fail
-	if ((position.x == distance * 3 + gap && (abs(115 - platform->getPosition().x) > 15 || abs(position.y - platform->getPosition().y) > 15)) ||
-		(position.x == winWidth - distance * 3 - gap && (abs(284 - platform->getPosition().x) > 15 || abs(position.y - platform->getPosition().y) > 15))) {
+	if ((position.x == distance * 3 && (abs(leftUpPosition.x - platform->getPosition().x) > 15 || abs(position.y - platform->getPosition().y) > 15)) ||
+		(position.x == distance * 5 && (abs(rightUpPosition.x - platform->getPosition().x) > 15 || abs(position.y - platform->getPosition().y) > 15))) {
 		fail(puppy, NULL);
 		return;
 	}
 	
 	//success
-	if (position.x == distance * 5 + gap || position.x == winWidth - distance * 5 - gap) {
+	if (position.x == distance * 4) {
 		success(puppy, NULL);
 		return;
 	}

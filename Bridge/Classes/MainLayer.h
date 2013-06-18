@@ -12,7 +12,7 @@
 #include "BridgeHeader.h"
 
 class MainLayer : public CCLayer {
-	
+	CCSprite* bg;
 	
 public:
 	CREATE_FUNC(MainLayer)

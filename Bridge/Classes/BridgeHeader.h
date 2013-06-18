@@ -10,9 +10,11 @@
 #define Bridge_BridgeHeader_h
 
 #include "cocos2d.h"
+#include "cocos-ext.h"
 #include "BridgeUtils.h"
 #include "SpriteHelperLoader.h"
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 #endif

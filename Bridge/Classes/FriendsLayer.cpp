@@ -14,6 +14,8 @@ bool FriendsLayer::init()
 		return false;
 	}
 	
+	CCTableView* tableView;
+	
 	return true;
 }
 
