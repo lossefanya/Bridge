@@ -11,7 +11,7 @@
 #include "cocos2d.h"
 #include "SimpleAudioEngine.h"
 #include "BridgeUtils.h"
-#include "PlayLayer.h"
+#include "MainLayer.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -51,7 +51,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 	CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 
 	
-	pDirector->runWithScene(BridgeUtils::wrap(PlayLayer::create()));
+	pDirector->runWithScene(BridgeUtils::wrap(MainLayer::create()));
 
     return true;
 }

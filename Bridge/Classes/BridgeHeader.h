@@ -17,4 +17,7 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+#define RelPos(p, x, y) ccp(p->getContentSize().width * x, p->getContentSize().height * y) //relative position
+#define Button(sprite, selector) CCMenu::createWithItem(CCMenuItemSprite::create(sprite, NULL, this, selector))
+
 #endif

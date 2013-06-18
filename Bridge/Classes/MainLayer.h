@@ -12,12 +12,21 @@
 #include "BridgeHeader.h"
 
 class MainLayer : public CCLayer {
-	CCSprite* bg;
+	CCLayer* bg;
 	
 public:
 	CREATE_FUNC(MainLayer)
     virtual bool init();
 	virtual ~MainLayer();
+	
+private:
+	void dismissPopup();
+	void popup();
+	void goFriends();
+	void goMessage();
+	void goShop();
+	void goSetting();
+	void goPlay();
 };
 
 #endif /* defined(__Bridge__MainLayer__) */

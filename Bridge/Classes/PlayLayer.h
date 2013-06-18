@@ -30,6 +30,8 @@ private:
 	void fail(CCNode* obj, void* data);
 	void success(CCNode* obj, void* data);
 	
+	void pop();
+
 public:
 	CREATE_FUNC(PlayLayer)
     virtual bool init();

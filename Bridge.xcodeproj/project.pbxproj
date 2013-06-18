@@ -2208,9 +2208,9 @@
 		B14909DB1760BBC4009CEDB0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				B149098B1760B511009CEDB0 /* AppDelegate.h */,
-				B149098C1760B511009CEDB0 /* AppDelegate.cpp */,
 				B14909CA1760BB99009CEDB0 /* BridgeHeader.h */,
+				B149098C1760B511009CEDB0 /* AppDelegate.cpp */,
+				B149098B1760B511009CEDB0 /* AppDelegate.h */,
 				B14909CB1760BB99009CEDB0 /* BridgeUtils.cpp */,
 				B14909CC1760BB99009CEDB0 /* BridgeUtils.h */,
 			);

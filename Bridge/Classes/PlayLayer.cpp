@@ -8,8 +8,6 @@
 
 #include "PlayLayer.h"
 
-#define RelPos(x, y) ccp(bg->getContentSize().width * x, bg->getContentSize().height * y) //relative position
-
 static const float gap = 0.0f;
 
 bool PlayLayer::init()
@@ -33,39 +31,51 @@ bool PlayLayer::init()
 	else bg->setScale(widthScale);
 
 	
-	leftUpPosition = RelPos(.345, .54);
-	leftDownPosition = RelPos(.345, .28);
-	rightUpPosition = RelPos(.655, .54);
-	rightDownPosition = RelPos(.655, .28);
+	leftUpPosition = RelPos(bg, .345, .54);
+	leftDownPosition = RelPos(bg, .345, .28);
+	rightUpPosition = RelPos(bg, .655, .54);
+	rightDownPosition = RelPos(bg, .655, .28);
 		
 	//add parts
 	CCSprite* goal = CCSprite::create("p_escape_01.png");
-	goal->setPosition(RelPos(.5, .6));
+	goal->setPosition(RelPos(bg, .5, .6));
 	bg->addChild(goal);
 	
 	CCSprite* ground = CCSprite::create("p_ground_01.png");
-	ground->setPosition(RelPos(.5, .4));
+	ground->setPosition(RelPos(bg, .5, .4));
 	bg->addChild(ground);
 	
-	CCMenu *leftUp = CCMenu::createWithItem(CCMenuItemSprite::create(CCSprite::create("p_button_01.png"), NULL, this, menu_selector(PlayLayer::leftUp)));
-	leftUp->setPosition(RelPos(.05, .9));
+	CCMenu *leftUp = Button(CCSprite::create("p_button_01.png"), menu_selector(PlayLayer::leftUp));
+	leftUp->setPosition(RelPos(bg, .075, .8));
 	bg->addChild(leftUp);
 	
-	CCMenu *leftDown = CCMenu::createWithItem(CCMenuItemSprite::create(CCSprite::create("p_button_01.png"), NULL, this, menu_selector(PlayLayer::leftDown)));
-	leftDown->setPosition(RelPos(.05, .1));
+	CCMenu *leftDown = Button(CCSprite::create("p_button_01.png"), menu_selector(PlayLayer::leftDown));
+	leftDown->setPosition(RelPos(bg, .075, .135));
 	bg->addChild(leftDown);
 	
-	CCMenu *rightUp = CCMenu::createWithItem(CCMenuItemSprite::create(CCSprite::create("p_button_01.png"), NULL, this, menu_selector(PlayLayer::rightUp)));
-	rightUp->setPosition(RelPos(.95, .9));
+	CCMenu *rightUp = Button(CCSprite::create("p_button_01.png"), menu_selector(PlayLayer::rightUp));
+	rightUp->setPosition(RelPos(bg, .925, .8));
 	bg->addChild(rightUp);
 	
-	CCMenu *rightDown = CCMenu::createWithItem(CCMenuItemSprite::create(CCSprite::create("p_button_01.png"), NULL, this, menu_selector(PlayLayer::rightDown)));
-	rightDown->setPosition(RelPos(.95, .1));
+	CCMenu *rightDown = Button(CCSprite::create("p_button_01.png"), menu_selector(PlayLayer::rightDown));
+	rightDown->setPosition(RelPos(bg, .925, .135));
 	bg->addChild(rightDown);
 	
 	platform = CCSprite::create("p_bridge_01.png"); //SpriteHelperLoader::createSpriteWithName("p_bridge_01", "Play", "sprite.pshs");
 	platform->setPosition(leftDownPosition);
 	bg->addChild(platform);
+	
+	CCMenu* exitBtn = Button(CCSprite::create("com_cancel_01.png"), menu_selector(PlayLayer::pop));
+	exitBtn->setPosition(RelPos(bg, .8, .95));
+	bg->addChild(exitBtn);
+	
+	CCSprite* itemSlot = CCSprite::create("p_item_b_01.png");
+	itemSlot->setPosition(RelPos(bg, .395, .157));
+	bg->addChild(itemSlot);
+	
+	CCSprite* score = CCSprite::create("p_score_01.png");
+	score->setPosition(RelPos(bg, .213, .945));
+	bg->addChild(score);
 	
     return true;
 }
@@ -108,16 +118,16 @@ void PlayLayer::spawn()
 	int i = (int)(CCRANDOM_0_1()*4);
 	switch (i) {
 		case 0:
-			start = RelPos(0, .55);
+			start = RelPos(bg, 0, .55);
 			break;
 		case 1:
-			start = RelPos(0, .29);
+			start = RelPos(bg, 0, .29);
 			break;
 		case 2:
-			start = RelPos(1, .55);
+			start = RelPos(bg, 1, .55);
 			break;
 		case 3:
-			start = RelPos(1, .29);
+			start = RelPos(bg, 1, .29);
 			break;
 		default:
 			spawn();
@@ -197,3 +207,10 @@ void PlayLayer::success(cocos2d::CCNode *obj, void *data)
 	obj->removeFromParentAndCleanup(true);
 	spawn();
 }
+
+void PlayLayer::pop()
+{
+	CCDirector::sharedDirector()->popToRootScene();
+}
+
+
