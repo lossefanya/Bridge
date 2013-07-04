@@ -35,6 +35,7 @@ bool PlayLayer::init()
 	leftDownPosition = RelPos(bg, .345, .28);
 	rightUpPosition = RelPos(bg, .655, .54);
 	rightDownPosition = RelPos(bg, .655, .28);
+	movingTime = 0;
 		
 	//add parts
 	CCSprite* goal = CCSprite::create("p_escape_01.png");
@@ -93,22 +94,22 @@ void PlayLayer::onEnterTransitionDidFinish()
 
 void PlayLayer::leftUp()
 {
-	platform->runAction(CCMoveTo::create(.2, leftUpPosition));
+	platform->runAction(CCMoveTo::create(movingTime, leftUpPosition));
 }
 
 void PlayLayer::leftDown()
 {
-	platform->runAction(CCMoveTo::create(.2, leftDownPosition));
+	platform->runAction(CCMoveTo::create(movingTime, leftDownPosition));
 }
 
 void PlayLayer::rightUp()
 {
-	platform->runAction(CCMoveTo::create(.2, rightUpPosition));
+	platform->runAction(CCMoveTo::create(movingTime, rightUpPosition));
 }
 
 void PlayLayer::rightDown()
 {
-	platform->runAction(CCMoveTo::create(.2, rightDownPosition));
+	platform->runAction(CCMoveTo::create(movingTime, rightDownPosition));
 }
 
 void PlayLayer::spawn()

@@ -147,3 +147,24 @@ void MainLayer::goPlay()
 	CCDirector::sharedDirector()->pushScene(BridgeUtils::wrap(PlayLayer::create()));
 
 }
+
+
+void MainLayer::tableCellTouched(CCTableView* table, CCTableViewCell* cell)
+{
+	
+}
+
+CCSize MainLayer::cellSizeForTable(CCTableView *table)
+{
+	return CCSizeZero;
+}
+
+CCTableViewCell* MainLayer::tableCellAtIndex(CCTableView *table, unsigned int idx)
+{
+	return NULL;
+}
+
+unsigned int MainLayer::numberOfCellsInTableView(CCTableView *table)
+{
+	return 0;
+}

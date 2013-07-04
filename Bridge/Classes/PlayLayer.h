@@ -18,6 +18,7 @@ class PlayLayer : public CCLayer {
 	CCPoint leftDownPosition;
 	CCPoint rightUpPosition;
 	CCPoint rightDownPosition;
+	float movingTime;
 	
 private:
 	void leftUp();
