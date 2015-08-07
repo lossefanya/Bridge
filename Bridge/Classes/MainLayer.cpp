@@ -91,6 +91,14 @@ bool MainLayer::init()
 	startBtn->setPosition(RelPos(mainBg, .85, .245));
 	mainBg->addChild(startBtn);
 	
+//	tableView = CCTableView::create(this, CCSizeMake(WINWIDTH*2, WINHEIGHT));
+//	tableView->setDirection(kCCScrollViewDirectionBoth);
+//	tableView->setPosition(ccp(0,0));
+//	tableView->setDelegate(this);
+//	tableView->setVerticalFillOrder(kCCTableViewFillTopDown);
+//    tableView->reloadData();
+
+	
 	return true;
 }
 

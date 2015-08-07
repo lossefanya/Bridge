@@ -13,7 +13,9 @@
 
 class MainLayer : public CCLayer, public cocos2d::extension::CCTableViewDataSource, public cocos2d::extension::CCTableViewDelegate {
 	CCLayer* bg;
-	CCTableView* tableView;
+	CCTableView* rankTableView;
+	CCTableView* friendsTableView;
+	CCTableView* messageTableView;
 	
 public:
 	CREATE_FUNC(MainLayer)
